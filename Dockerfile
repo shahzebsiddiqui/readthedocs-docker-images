@@ -34,6 +34,7 @@ RUN apt-get -y install texlive-full
 RUN apt-get -y install \
     texlive-fonts-recommended latex-cjk-chinese-arphic-bkai00mp \
     latex-cjk-chinese-arphic-gbsn00lp latex-cjk-chinese-arphic-gkai00mp
+RUN apt-get -y update && apt-get -y install texlive-xetex
 
 # Install plantuml
 RUN apt-get -y install plantuml
