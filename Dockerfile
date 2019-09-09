@@ -136,7 +136,7 @@ RUN apt-get -y install \
  && npm install --global \
       jsdoc \
       typedoc
-RUN apt-get -y lmod
+RUN apt-get -y install lmod
 # UID and GID from readthedocs/user
 RUN groupadd --gid 205 docs
 RUN useradd -m --uid 1005 --gid 205 docs
