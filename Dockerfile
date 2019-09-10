@@ -137,6 +137,8 @@ RUN apt-get -y install \
       jsdoc \
       typedoc
 RUN apt-get -y install lmod
+# BUG FIX: https://bugs.launchpad.net/ubuntu/+source/lua-posix/+bug/1752082
+RUN ln -s /usr/lib/x86_64-linux-gnu/lua/5.2/posix_c.so /usr/lib/x86_64-linux-gnu/lua/5.2/posix.so
 # UID and GID from readthedocs/user
 RUN groupadd --gid 205 docs
 RUN useradd -m --uid 1005 --gid 205 docs
